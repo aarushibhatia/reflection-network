@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> {{i18n.Traffic}}</title>
+    <link href="./css/main.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="./3p/material.fonts.css">
+    <link rel="stylesheet" type="text/css" href="./3p/material.min.css">
+    <link rel="stylesheet" type="text/css" href="./3p/getmdl-select.min.css">
+    <link rel="stylesheet" type="text/css" href="./3p/mdl-selectfield.min.css">
+
+    <script type="text/javascript" src="./3p/material.min.js"></script>
+    <script type="text/javascript" src="./3p/getmdl-select.min.js"></script>
+    <script type="text/javascript" src="./3p/mdl-selectfield.min.js"></script>
+
+    <script type="text/javascript" src="./3p/jquery.min.js"></script>
+    <script type="text/javascript" src="./3p/jquery.maskedinput.min.js"></script>
+
+    <script type="module">
+        import { main } from "./js/main.mjs"; main.init(); import { traffic_component } from "./components/traffic-component/traffic-component.mjs"; traffic_component.register(APP_CONSTANTS.USER_ROLE); import { data_table } from "./components/data-table/data-table.mjs";
+        data_table.register(APP_CONSTANTS.USER_ROLE);
+    </script>
+</head>
+
+<body id="color">
+    <div id="traffic-component-container">
+        <traffic-component> </traffic-component>
+    </div>
+
+
+</body>
+
+</html>

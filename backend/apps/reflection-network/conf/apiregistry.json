@@ -1,0 +1,4 @@
+{
+    "/apps/reflection-network/load-balancing": "/apis/loadBalancing.js",
+    "/apps/reflection-network/load-balancing-logs": "/apis/loadBalancingLogs.js"
+}

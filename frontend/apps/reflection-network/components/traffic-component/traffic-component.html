@@ -1,0 +1,153 @@
+<link href="./components/traffic-component/traffic-component.css" rel="stylesheet" type="text/css">
+<link href="./3p/mdl-selectfield.min.css" rel="stylesheet" type="text/css">
+<link href="./3p/getmdl-select.min.css" rel="stylesheet" type="text/css">
+<!-- <script type="module">
+
+</script> -->
+<h3 id="fontcolor">{{i18n.Traffic}}</h3>
+<p id="outside-card">{{i18n.Control}}</p>
+
+<div class="mdl-card">
+    <h5>{{i18n.LoadBalancing}}</h5>
+    <p>{{i18n.Safeguard1}}</p>
+    <p id="outside-card">{{i18n.Safeguard2}}</p>
+    <p>{{i18n.LearnMore1}}<span id="fontcolor">{{i18n.Billing}}</span>{{i18n.LearnMore2}}</p>
+    <br>
+
+    <div class="button-child-div">
+        <button id="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+            {{i18n.EnableLoadBalancing}}
+          </button>
+    </div>
+    <div id="load-balancing">
+        <!-- <data-table></data-table> -->
+        <table class="load-balancing" name="load-balancing">
+            <div>
+                <tr id="thcolor">
+                    <th id="thfont" name="Health">{{i18n.Health}}</th>
+                    <th id="thfont" name="HostName">{{i18n.HostName}}</th>
+                    <th id="thfont" name="AvailablePools">{{i18n.AvailablePools}}</th>
+                    <th id="thfont" name="TTL">{{i18n.TTL}}</th>
+                    <th id="thfont" name="Proxied">{{i18n.Proxied}}</th>
+                    <th id="thfont" name="Enabled">{{i18n.Enabled}}</th>
+                </tr>
+            </div>
+            {{#loadBalancing}}
+            <div class="parent-div">
+                <tr>
+                    <td>{{i18n.NotFound}}</td>
+                    <td>{{HostName}}</td>
+                    <td>{{AvailablePools}}</td>
+                    <td>{{TTL}}</td>
+                    <td>{{Proxied}}</td>
+                    <td>{{Enabled}}</td>
+                </tr>
+            </div>
+            {{/loadBalancing}}
+        </table>
+    </div>
+
+    <div class="parent-div">
+        <div class="help inside-div>">
+            <p class="child-div" id="fontcolor">{{i18n.Help}}</p>
+        </div>
+    </div>
+    <br>
+</div>
+<br>
+<div class="mdl-card">
+    <h5 id="balancingLogs">{{i18n.LoadBalancingLogs}}</h5>
+    <br>
+    <div class="date">
+        <p>{{i18n.TimeDuration}}</p>
+    </div>
+    <p>{{i18n.FilterBy}}</p>
+
+    <div id="drop-down-container">
+        <div id="filters">
+            <p class="category">{{i18n.PoolHealth}}</p>
+            <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
+                <select id="PoolHealth" class="mdl-selectfield__select"> <option value=""></option></select> <label class="mdl-selectfield__label" for="PoolHealth">{{i18n.SelectPoolHealth}}</label>
+            </div>
+        </div>
+
+        <div id="filters">
+            <p class="category">{{i18n.Pool}}</p>
+            <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
+                <select id="Pool" class="mdl-selectfield__select"> <option value=""></option></select> <label class="mdl-selectfield__label" for="Pool">{{i18n.SelectPool}}</label>
+            </div>
+        </div>
+
+        <div id="filters">
+            <p class="category">{{i18n.OriginHealth}}</p>
+            <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
+                <select id="OriginHealth" class="mdl-selectfield__select"> <option value=""></option></select> <label class="mdl-selectfield__label" for="OriginHealth">{{i18n.SelectOriginHealth}}</label>
+            </div>
+        </div>
+
+        <div id="filters">
+            <p class="category">{{i18n.Origin}}</p>
+            <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
+                <select id="Origin" class="mdl-selectfield__select"> <option value=""></option></select> <label class="mdl-selectfield__label" for="Origin">{{i18n.SelectOrigin}}</label>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+    <br>
+    <div id="load-balancing-logs">
+        <!-- <data-table></data-table> -->
+        <table class="load-balancing-logs" name="load-balancing-logs">
+            <tr id="thcolor">
+                <th id="thfont" name="Date">{{i18n.Date}}</th>
+                <th id="thfont" name="TriggeringOriginEvent">{{i18n.TriggeringOriginEvent}}</th>
+                <th id="thfont" name="PoolStatus">{{i18n.PoolStatus}}</th>
+            </tr>
+            {{#loadBalancingLogs}}
+            <tr>
+                <td>{{Date}}</td>
+                <td>{{TriggeringOriginEvent}}</td>
+                <td>{{PoolStatus}}</td>
+            </tr>
+            {{/loadBalancingLogs}}
+        </table>
+    </div>
+
+
+</div>
+
+
+
+
+<br>
+
+
+
+<!-- <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label is-upgraded" data-upgraded=",MaterialSelectfield">
+        <select class="mdl-selectfield__select" id="professsion2" name="professsion">
+        <option value=""></option>
+        </select>
+        <label class="mdl-selectfield__label" for="professsion2">Profession</label>
+        <div id="plc-1573454887339" class="mdl-selectfield__placeholder"><i class="material-icons" tabindex="-1"></i></div>
+        <div class="mdl-menu__container is-upgraded">
+            <div class="mdl-menu__outline"></div>
+            <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events" tabindex="-1" for="plc-1573454887339" data-upgraded=",MaterialMenu" style="">
+                <li class="mdl-menu__item mdl-js-ripple-effect" data-value="0" tabindex="-1"><span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span>
+                </li>
+                <li class="mdl-menu__item mdl-js-ripple-effect" data-value="1" tabindex="-1">option 1<span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span>
+                </li>
+                <li class="mdl-menu__item mdl-js-ripple-effect" data-value="2" tabindex="-1">option 2<span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span>
+                </li>
+                <li class="mdl-menu__item mdl-js-ripple-effect" data-value="3" tabindex="-1">option 3<span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span>
+                </li>
+                <li class="mdl-menu__item mdl-js-ripple-effect" data-value="4" tabindex="-1">option 4<span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span>
+                </li>
+                <li class="mdl-menu__item mdl-js-ripple-effect" data-value="5" tabindex="-1">option 5<span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span>
+                </li>
+            </ul>
+        </div>
+    </div> -->
