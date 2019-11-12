@@ -1,9 +1,7 @@
 <link href="./components/traffic-component/traffic-component.css" rel="stylesheet" type="text/css">
 <link href="./3p/mdl-selectfield.min.css" rel="stylesheet" type="text/css">
 <link href="./3p/getmdl-select.min.css" rel="stylesheet" type="text/css">
-<!-- <script type="module">
 
-</script> -->
 <h3 id="fontcolor">{{i18n.Traffic}}</h3>
 <p id="outside-card">{{i18n.Control}}</p>
 
@@ -21,7 +19,7 @@
     </div>
     <div id="load-balancing">
         <!-- <data-table></data-table> -->
-        <table class="load-balancing" name="load-balancing">
+        <table class="load-balancing" name="load-balancing" cellspacing="0">
             <div>
                 <tr id="thcolor">
                     <th id="thfont" name="Health">{{i18n.Health}}</th>
@@ -45,6 +43,12 @@
             </div>
             {{/loadBalancing}}
         </table>
+    </div>
+
+    <div class="parent-div">
+        <div class="inside-div>">
+            <p id="tableData">{{i18n.NoLoadBalancers}}</p>
+        </div>
     </div>
 
     <div class="parent-div">
@@ -101,7 +105,7 @@
     <br>
     <div id="load-balancing-logs">
         <!-- <data-table></data-table> -->
-        <table class="load-balancing-logs" name="load-balancing-logs">
+        <table class="load-balancing-logs" name="load-balancing-logs" cellspacing="0">
             <tr id="thcolor">
                 <th id="thfont" name="Date">{{i18n.Date}}</th>
                 <th id="thfont" name="TriggeringOriginEvent">{{i18n.TriggeringOriginEvent}}</th>
@@ -115,6 +119,12 @@
             </tr>
             {{/loadBalancingLogs}}
         </table>
+    </div>
+
+    <div class="parent-div">
+        <div class="inside-div>">
+            <p id="tableData">{{i18n.NotFound}}</p>
+        </div>
     </div>
 
 
